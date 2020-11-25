@@ -13,7 +13,6 @@ client = discord.Client()
 commands = {'hello':'!hello','dad':'!dad','memeit':'!memeit /aag/aliens/aliens everywhere','templates':'!templates','help':'!help'}
 
 
-       
 
 async def wrongCommand(message):
     await message.channel.send(f"{message.author.mention}, wrong command. Here is the command list {commands.keys()}")
