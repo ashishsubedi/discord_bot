@@ -7,10 +7,6 @@ class Meme(commands.Cog):
     def __init__(self,bot):
         self.bot = bot
 
-    @commands.Cog.listener()
-    async def on_ready(self):
-        print(f"Logged in as {self.bot.user}")
-
     @commands.command()
     async def dad(self,ctx):
         headers = {
@@ -20,7 +16,7 @@ class Meme(commands.Cog):
 
         await ctx.message.channel.send(f"{ctx.message.author.mention}! \n {r.content.decode('utf-8')}")
 
-    @commands.command()
+    @commands.command(description="Format: !memeit templateId/text1/text2/...")
     async def memeit(self,ctx,*,message):
         #Message format:
         # !memeit <id> /<text0>/ <text<1>
@@ -57,7 +53,7 @@ class Meme(commands.Cog):
             'content-type':'application/json'
         }
         res = requests.get(url,headers=headers)
-        
+
         if res.status_code == 200:
 
             result = res.json()

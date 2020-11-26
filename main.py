@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-# import commandHandler
 import os
 from dotenv import load_dotenv
 
@@ -10,12 +9,17 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 
 bot = commands.Bot(command_prefix='!')
 
+
 @bot.command()
 async def load(ctx: commands.Context,extension):
     bot.load_extension(f'cogs.{extension}')
 @bot.command()
 async def unload(ctx: commands.Context,extension):
     bot.unload_extension(f'cogs.{extension}')
+
+@bot.event
+async def on_ready():
+    print(f"Logged in as {bot.user}")
 
 @bot.command()
 async def hello(ctx):
