@@ -1,4 +1,5 @@
 ## Discord Bot
+### ![Invite Bot](https://discord.com/api/oauth2/authorize?client_id=781186803835207710&permissions=8&scope=bot)  
 Just me trying to learn about discord bots by trying to make one that serves me well. I am open to any contribution.
 
 ## What it does till now
@@ -9,4 +10,4 @@ Just me trying to learn about discord bots by trying to make one that serves me 
 - [x] Plays Rock Paper Scissors game and swear you with British Swears
 
 ### Feel free to recommend and contribute anything. 
-### Will organize the file structure better so that contribution can be added easily.
+### :heavy_check_mark: Will organize the file structure better so that contribution can be added easily.
