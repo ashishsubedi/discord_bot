@@ -2,12 +2,67 @@ import discord
 from discord.ext import commands
 import os
 from dotenv import load_dotenv
+import random
 
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
 bot = commands.Bot(command_prefix='!')
+
+helloList = ["Marhaba",
+"Grüß Gott",
+"Namaskar",
+"Zdraveite",
+"Hola",
+"Hafa adai",
+"Nǐ hǎo",
+"Dobro Jutro",
+"Dobar dan",
+"Dobra većer",
+"God dag",
+"Hoi",
+"Hallo",
+"hyvää päivää",
+"Bonjour",
+"Dia dhuit",
+"Guten tag",
+"Yasou",
+"Shalom",
+"Namaste",
+"Jo napot",
+"Góðan dag",
+"Nde-ewo",
+"Selamat siang",
+"Salve",
+"Konnichiwa",
+"Ahn nyong ha se yo",
+"Salve",
+"Sveiki",
+"Moïen",
+"Bonġu",
+"Niltze",
+"Namastē",
+"Hallo",
+"Salam",
+"Cześć",
+"Olá",
+"Bună ziua",
+"Zdravstvuyte",
+"Zdravo",
+"Ahoj",
+"Hola",
+"Hujambo",
+"Hallå",
+"Ia orna",
+"Sawasdee",
+"Avuxeni",
+"Merhaba",
+"Zdravstvuyte",
+"Assalamo aleikum",
+"xin chào",
+"Shwmae",
+"Sawubona"]
 
 
 @bot.command()
@@ -23,7 +78,8 @@ async def on_ready():
 
 @bot.command()
 async def hello(ctx):
-    await ctx.channel.send(f"Ola, {ctx.message.author.mention}!")
+    word = random.sample(helloList,1)[0]
+    await ctx.channel.send(f"{word}, {ctx.message.author.mention}!")
 
 
 for filename in os.listdir('./cogs'):
