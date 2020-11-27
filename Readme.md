@@ -3,7 +3,7 @@
 Just me trying to learn about discord bots by trying to make one that serves me well. I am open to any contribution.
 
 ## What it does till now
-- [x] Bade hello in multiple language
+- [x] Say hello in multiple language
 - [x] Tell a dad joke
 - [x] Generate meme with given template and text
 - [x] List all templates
