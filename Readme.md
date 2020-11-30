@@ -8,9 +8,9 @@ Just me trying to learn about discord bots by trying to make one that serves me 
 - [x] Generate meme with given template and text
 - [x] List all templates
 - [x] Plays Rock Paper Scissors game and swear you with British Swears
-- [ ] Play youtube link
-- [ ] Play youtube search
-- [ ] Auto play Lofi Hiphop and whiskey blues
+- [x] Play youtube link
+- [x] Play youtube search
+- [x] Auto play Lofi Hiphop and whiskey blues
 
 ### Feel free to recommend and contribute anything. 
 ### :heavy_check_mark: Will organize the file structure better so that contribution can be added easily.
