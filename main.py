@@ -3,6 +3,15 @@ from discord.ext import commands
 import os
 from dotenv import load_dotenv
 import random
+import ctypes
+import ctypes.util
+ 
+print("ctypes - Find opus:")
+a = ctypes.util.find_library('opus')
+print(a)
+discord.opus.load_opus(a)
+if not discord.opus.is_loaded():
+    print('Opus failed to load')
 
 
 load_dotenv()
