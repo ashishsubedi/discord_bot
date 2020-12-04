@@ -5,19 +5,23 @@ from dotenv import load_dotenv
 import random
 import ctypes
 import ctypes.util
- 
-print("ctypes - Find opus:")
-a = ctypes.util.find_library('opus')
-print(a)
-discord.opus.load_opus(a)
-if not discord.opus.is_loaded():
-    print('Opus failed to load')
+
+try:
+    print("ctypes - Find opus:")
+    a = ctypes.util.find_library('opus')
+    print(a)
+    discord.opus.load_opus(a)
+    if not discord.opus.is_loaded():
+        print('Opus failed to load')
+except:
+    pass
+
 
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
-bot = commands.Bot(command_prefix='!')
+bot = commands.Bot(command_prefix='>')
 
 helloList = ["Marhaba",
 "Grüß Gott",
